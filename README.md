@@ -6,7 +6,7 @@
 
 An unofficial community-built Intel GPU/OpenVINO image for the Obico ML API, intended for Linux x86-64 hosts with a supported Intel graphics device.
 
-**Image:** `ghcr.io/dafron/obico-ml-intel:latest`
+**Image:** `ghcr.io/dafr0n/obico-ml-intel:latest`
 
 > [!IMPORTANT]
 > This is an independent community build. It is not affiliated with, endorsed by, or supported by Obico. Obico names are used only to identify compatibility.
@@ -57,7 +57,7 @@ If the main Obico container has `ML_API_TOKEN` configured, set the **same value*
 
 | Setting | Value |
 |---|---|
-| Image | `ghcr.io/dafron/obico-ml-intel:latest` |
+| Image | `ghcr.io/dafr0n/obico-ml-intel:latest` |
 | Network | Share network namespace of container `obico` |
 | Device | `/dev/dri:/dev/dri` |
 | `ML_API_GPU_PROVIDER` | `OpenVINOExecutionProvider` |
@@ -79,7 +79,7 @@ docker run -d \
   -e ML_API_OPENVINO_DEVICE=GPU \
   -e ML_API_TOKEN='YOUR_OBICO_ML_API_TOKEN' \
   --entrypoint gunicorn \
-  ghcr.io/dafron/obico-ml-intel:latest \
+  ghcr.io/dafr0n/obico-ml-intel:latest \
   --bind 0.0.0.0:3335 --workers 1 --timeout 120 wsgi
 ```
 
@@ -114,7 +114,7 @@ Check the ONNX Runtime provider output and OpenVINO/device initialisation messag
 Pull the latest published image and recreate the ML API container:
 
 ```bash
-docker pull ghcr.io/dafron/obico-ml-intel:latest
+docker pull ghcr.io/dafr0n/obico-ml-intel:latest
 ```
 
 The `latest` tag is built from the pinned source revision when this repository's `main` branch is updated. The workflow also publishes commit-SHA tags and version tags when a `v*` Git tag is pushed.
