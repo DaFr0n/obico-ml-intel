@@ -11,7 +11,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/dafron/obico-ml-intel
+  IMAGE_NAME: ghcr.io/dafr0n/obico-ml-intel
   UPSTREAM_REPOSITORY: https://github.com/TheSpaghettiDetective/obico-server.git
   UPSTREAM_COMMIT: df8190ef7500459599ebf398c3d1f653754792fd
 
